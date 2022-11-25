@@ -45,8 +45,8 @@ public class ToolsController : ControllerBase
         {
             string json = r.ReadToEnd();
             IEnumerable<VoitureListClean> items = JsonSerializer.Deserialize<List<VoitureListClean>>(json);
-            var result = items.All(x => x.Marque == carBrand).ToList();
-            return result;
+            // var result = items.All(x => x.Marque == carBrand);
+            return null;
         }
     }
 }
